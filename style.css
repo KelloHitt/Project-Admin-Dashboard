@@ -70,3 +70,13 @@ input[type="search"] {
     font-weight: 700;
     font-size: 0.9em;
 }
+
+.second-part-header {
+    display: grid;
+    border: 4px dashed goldenrod;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.buttons {
+  
+}
