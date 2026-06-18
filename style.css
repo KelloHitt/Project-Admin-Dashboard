@@ -139,8 +139,23 @@ input[type="search"] {
     font-size: 1.5em;
 }
 
-.dashboard-set1 {
+.dashboard-set1, .dashboard-set2 {
     display: grid;
     grid-template-rows: repeat(auto, 1fr);
+    gap: 10px;
+    border: 2px solid green;
+    padding-left: 0.4rem;
+    
 }
 
+.dashboard-set1-item {
+    color: white;
+    display: grid;
+    /* max-content is saying to "Make this column exactly as wide as its content needs to be without wrapping." */
+    grid-template-columns: max-content max-content;
+    gap: 0.5rem;
+}
+
+.dashboard-icon {
+    height: 1.1rem; width: 1.1rem;
+}
