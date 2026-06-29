@@ -4,25 +4,38 @@
     margin: 0;
 }
 
-html,
-body {
+html {
     min-height: 100vh;
 }
-
 body {
+    /* Notes
+       sidebar = fixed column
+       header = auto height
+       main content = fills the remaining space
+
+
+        Value	                                                       What It Means
+        auto	                     Size based on the content, but allow it to grow if there's extra space.
+        max-content	                 Size to the content's maximum intrinsic size. Don't stretch just because there's extra space.
+    */
+    
+    min-height: 100vh;
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
-    grid-template-areas: 
-    "sidebar header header header"
-    "sidebar main-content main-content main-content"
-    "sidebar main-content main-content main-content"
-    "sidebar main-content main-content main-content";
+
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main-content";
 }
 
 .header {
     grid-area: header;
     padding-left: 10px;
-    box-shadow: 0px 6px 8px -6px rgb(210, 210, 210);
+    box-shadow: 0px 4px 8px rgb(172, 172, 172);
+    padding-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .sidebar {
@@ -35,61 +48,6 @@ body {
      /* The auto in the above means that the size of each row is based on the content inside it. */
     align-content: start;
     gap: 30px;
-}
-
-
-
-
-
-/* ------------------ Main Content Styles ------------------ */
-
-.main-content {
-    grid-area: main-content;
-    padding: 10px;
-    padding-top: 25px;
-    background-color: rgb(230, 230, 230);
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}
-
-.projects .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.projects .cards .card {
-    background-color: white;
-    min-height: 14em;
-    padding: 30px 2px 0px 30px;
-    border-left: 0.5rem solid rgb(255, 191, 0);
-    box-shadow: 0px 4px 8px rgb(210, 210, 210);
-    border-radius: 2.2%;
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-
-}
-
-.projects .cards .card h4 {
-    font-size: 1.1em;
-    margin-bottom: 3px;
-}
-
-.projects .cards .card  p {
-    font-size: 0.9rem;
-}
-
-.icons {
-    border: 1px solid red;
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
-    justify-content: end;
-    gap: 20px;
-}
-
-.card-icon {
-    height: 1.2rem; 
-    width: 1.2rem;
 }
 
 
@@ -131,8 +89,7 @@ input[type="search"] {
     justify-content: center;
     gap: 30px;
     align-items: center;
-    padding: 4px;
- 
+    padding: 4px; 
 }
 
 .user-info p {
@@ -183,10 +140,6 @@ input[type="search"] {
     display: grid;
     align-items: center;
     justify-items: end;
-}
-
-.text {
-    border: 4px solid green;
 }
 
 .larger-text {
@@ -246,3 +199,83 @@ input[type="search"] {
 .dashboard-set1 {
     margin-bottom: 50px;
 }
+
+
+
+
+/* ------------------ Main Content Styles ------------------ */
+
+.main-content {
+    grid-area: main-content;
+    padding: 20px;
+    padding-top: 25px;
+    background-color: rgb(230, 230, 230);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.projects .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.projects .cards .card {
+    background-color: white;
+    min-height: 8em;
+    padding: 35px 5px 0px 30px;
+    border-left: 0.5rem solid rgb(255, 191, 0);
+    box-shadow: 0px 4px 8px rgb(210, 210, 210);
+    border-radius: 2.2%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+
+}
+
+.projects .cards .card h4 {
+    font-size: 1em;
+    margin-bottom: 3px;
+}
+
+.projects .cards .card  p {
+    font-size: 0.8rem;
+    color: rgb(92, 92, 92);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: end;
+    gap: 20px;
+    align-items: end;
+    padding: 0px 25px 30px 0px;
+}
+
+.card-icon {
+    height: 1.3rem; 
+    width: 1.3rem;
+}
+
+/* Rotates the svg icon */
+img.rotated-svg {
+    transform: rotate(-90deg);
+}
+
+
+.main-content-h3, .trending h3, .announcements-and-trends h3 {
+    margin-bottom: 18px;
+}
+
+/* ------ Announcemnts Styles ------ */
+.announcements-and-trends {
+    display: grid;
+    margin-left: 10px;
+}
+
+.trending-profile img {
+    height: 3.6rem;
+    width: 3.6rem;
+    border-radius: 50%;
+}
+
