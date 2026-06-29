@@ -267,11 +267,12 @@ img.rotated-svg {
     margin-bottom: 18px;
 }
 
-/* ------ Announcemnts Styles ------ */
+/* ------ Announcements Styles ------ */
 
 .announcements-and-trends {
     display: grid;
     margin: 0px 20px 0px 20px;
+    gap: 10px;
 }
 
 .announcements {
@@ -281,6 +282,7 @@ img.rotated-svg {
     background-color: white;
     padding: 15px;
     border-radius: 2.2%;
+    box-shadow: 0px 4px 8px 0px rgb(172, 172, 172);
 }
 
 .announcement {
@@ -307,10 +309,39 @@ img.rotated-svg {
     color: rgb(135, 134, 134);
 }
 
+
+/* ------ Trending Section Styles ------ */
+
 .trending-profile img {
     height: 3.6rem;
     width: 3.6rem;
     border-radius: 50%;
+}
+
+.trending-card {
+    display: grid;
+    background-color: white;
+    border-radius: 2.2%;
+    justify-content: center;
+    padding: 5px 0px 5px 0px;
+}
+
+.trending-profile {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 7px;
+    padding: 8px;
+}
+
+.trending-profile-text {
+    display: grid;
+    padding: 8px;
+}
+
+.trending-profile-text .project {
+    font-size: 1rem;
+    color: grey;
+
 }
 
 
