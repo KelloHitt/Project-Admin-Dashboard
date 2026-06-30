@@ -69,15 +69,15 @@ body {
 }
 
 input[type="search"] {
-    width: 75%;
+    width: 85%;
     height: 1.5rem;
     justify-self: start;
     border: none;
     border-radius: 12px;
     appearance: none;
-    padding: 12px;
+    padding: 14px;
     height: 20px;
-    background-color: rgb(226, 226, 226);
+    background-color: rgba(211, 220, 227, 0.889);
 }
 
 .search-icon {
@@ -95,7 +95,7 @@ input[type="search"] {
 .user-info p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 700;
-    font-size: 0.9em;
+    font-size: 1rem;
 }
 
 .second-part-header {
@@ -103,32 +103,40 @@ input[type="search"] {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
+
+.second-part-header .text {
+    padding: 10px 5px 5px 5px;
+    font-weight: 520;
+}
+
 .buttons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    justify-items: center;
+    grid-template-columns: auto auto auto;
     align-items: center;
+    justify-content: end;
+    gap: 20px;
+    padding-right: 50px;
 }
 
 .buttons button {
     border: none;
-    padding: 4px 10px;
+    padding: 10px 24px;
     border-radius: 30px;
     background-color: rgb(64, 144, 210);
     color: white;
-    height: 40%;
-    width: 60%;
     font-weight: 500;
-
+    min-width: 86px;
+    margin-top: 20px;
 }
 
 .welcome {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 5px;
+    grid-template-columns: max-content max-content;
+    gap: 20px;
     margin-top: 20px;
     margin-bottom: 5px;
     font-weight: 500;
+    padding-left: 38px;
     
 }
 
@@ -142,10 +150,15 @@ input[type="search"] {
     justify-items: end;
 }
 
+#hi-there {
+    font-size: 0.8rem;
+}
+
 .larger-text {
     margin-top: 5px;
-    font-size: 1.5em;
+    font-size: 1.3rem;
 }
+
 
 
 
@@ -209,7 +222,7 @@ input[type="search"] {
     grid-area: main-content;
     padding: 20px;
     padding-top: 25px;
-    background-color: rgb(230, 230, 230);
+    background-color:rgba(223, 229, 234, 0.943);
     display: grid;
     grid-template-columns: 2.5fr 1fr;
 }
