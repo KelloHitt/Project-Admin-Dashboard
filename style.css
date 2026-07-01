@@ -9,9 +9,9 @@ html {
 }
 body {
     /* Notes
-       sidebar = fixed column
-       header = auto height
-       main content = fills the remaining space
+        sidebar = fixed column
+        header = auto height
+        main content = fills the remaining space
 
 
         Value	                                                       What It Means
@@ -21,7 +21,7 @@ body {
     
     min-height: 100vh;
     display: grid;
-
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto 1fr;
 
@@ -43,11 +43,10 @@ body {
     background-color: rgb(64, 144, 210);
     color: white;
     display: grid;
-    gap: 4px;
     grid-template-rows: repeat(3, auto);
      /* The auto in the above means that the size of each row is based on the content inside it. */
     align-content: start;
-    gap: 30px;
+    gap: 50px;
 }
 
 
@@ -168,7 +167,7 @@ input[type="search"] {
     display: grid;
     grid-template-rows: repeat(auto, 1fr);
     gap: 20px;
-    padding-left: 1.1rem;
+    padding-left: 1.9rem;
     
 }
 
@@ -186,7 +185,7 @@ input[type="search"] {
 }
 
 .set1, .set2 {
-    font-size:  1.1rem;
+    font-size:  1.4rem;
 }
 
 
@@ -195,7 +194,7 @@ input[type="search"] {
     grid-template-columns: max-content max-content;
     align-items: center; 
     gap: 0.7rem;
-    padding-left: 0.4rem;
+    padding-left: 1.3rem;
     padding-top: 1rem;
 }
 
@@ -206,7 +205,7 @@ input[type="search"] {
 
 
 .dashboard-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .dashboard-set1 {
@@ -360,7 +359,6 @@ img.rotated-svg {
 .trending-profile-text .project {
     font-size: 0.8rem;
     color: grey;
-
 }
 
 
